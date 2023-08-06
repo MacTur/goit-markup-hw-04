@@ -9,6 +9,7 @@
   --brand-color6: rgba(64, 75, 191, 1);
   --brand-color7: rgba(231, 233, 252, 1);
   --brand-color8: rgba(142, 143, 153, 1);
+  --brand-color9: rgba(49, 208, 170, 1);
 }
 
 body {
@@ -144,7 +145,7 @@ header {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(/images/people-office.jpg);
+    url(../images/people-office.jpg);
   max-width: 1440px;
   height: 600px;
   margin: 0 auto;
@@ -262,8 +263,7 @@ header {
   padding-top: 120px;
 }
 .features,
-.feature-title p,
-.icons-wrapper {
+.feature-title p {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -275,7 +275,15 @@ header {
   letter-spacing: 0.2px;
 }
 
+.features-icon {
+  width: 64px;
+  height: 64px;
+}
+
 .icons-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 264px;
   height: 112px;
   border-radius: 4px;
@@ -326,13 +334,13 @@ header {
   max-width: 264px;
   margin-top: 17.5px;
   color: var(--brand-color4);
+  line-height: 150%;
+  letter-spacing: 0.32px;
 }
 
 .footer-wraper {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 312px;
+  justify-content: flex-start;
   background-color: var(--brand-color1);
 }
 
@@ -345,6 +353,13 @@ header {
   justify-content: space-between;
   row-gap: 48px;
   margin-bottom: 120px;
+}
+
+.cards li:hover,
+.cards li:focus {
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .cards figure {
@@ -360,4 +375,60 @@ header {
 
 .project-card-title {
   margin-bottom: 8px;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--brand-color2);
+}
+
+.circle:hover,
+.circle:focus {
+  background-color: var(--brand-color6);
+}
+
+.circle svg {
+  fill: var(--brand-color4);
+  width: 16px;
+  height: 16px;
+}
+
+.sm-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.footer-logo {
+  margin-top: 100px;
+}
+
+.footer-sm-wrapper {
+  margin-top: 100px;
+  margin-left: 120px;
+  margin-bottom: 132px;
+}
+
+.footer-sm-list {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-sm-list .circle:hover {
+  background-color: var(--brand-color9);
+}
+
+.sm-title {
+  color: var(--brand-color4);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.32px;
+  padding-bottom: 16px;
 }
