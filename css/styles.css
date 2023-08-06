@@ -8,6 +8,7 @@
   --brand-color5: rgba(255, 255, 255, 1);
   --brand-color6: rgba(64, 75, 191, 1);
   --brand-color7: rgba(231, 233, 252, 1);
+  --brand-color8: rgba(142, 143, 153, 1);
 }
 
 body {
@@ -139,6 +140,14 @@ header {
 
 .main-title-bg {
   background-color: var(--brand-color1);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(/images/people-office.jpg);
+  max-width: 1440px;
+  height: 600px;
+  margin: 0 auto;
 }
 
 .order-button {
@@ -253,8 +262,10 @@ header {
   padding-top: 120px;
 }
 .features,
-.feature-title p {
+.feature-title p,
+.icons-wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
@@ -262,6 +273,14 @@ header {
   padding-top: 8px;
   max-width: 264px;
   letter-spacing: 0.2px;
+}
+
+.icons-wrapper {
+  width: 264px;
+  height: 112px;
+  border-radius: 4px;
+  background-color: var(--brand-color4);
+  margin-bottom: 8px;
 }
 
 .capabilities {
@@ -272,6 +291,30 @@ header {
   row-gap: 24px;
 }
 
+.customers-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 24px;
+  justify-content: space-between;
+}
+
+.customers-list-element {
+  display: block;
+  width: 168px;
+  height: 88px;
+}
+
+.customers-icon {
+  fill: var(--brand-color8);
+  border: 1px solid var(--brand-color8);
+  border-radius: 4px;
+}
+
+.customers-list-element :hover,
+.customers-list-element :focus {
+  fill: var(--brand-color6);
+  border: 1px solid var(--brand-color6);
+}
 .footer-bg {
   background-color: var(--brand-color1);
   padding-left: 0;
